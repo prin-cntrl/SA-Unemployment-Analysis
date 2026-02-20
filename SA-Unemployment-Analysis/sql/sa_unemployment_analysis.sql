@@ -1,0 +1,27 @@
+-- SA Unemployment Analysis Table
+CREATE TABLE sa_unemployment (
+    Year INT,
+    Unemployment_Rate FLOAT
+);
+
+-- Insert example data
+INSERT INTO sa_unemployment (Year, Unemployment_Rate) VALUES
+(2010, 24.7),
+(2011, 24.9),
+(2012, 25.0),
+(2013, 25.2),
+(2014, 25.0),
+(2015, 25.1),
+(2016, 26.0),
+(2017, 27.0),
+(2018, 27.5),
+(2019, 28.0),
+(2020, 30.0),
+(2021, 32.5),
+(2022, 33.0);
+
+-- Example query
+SELECT Year, AVG(Unemployment_Rate) AS Avg_Unemployment
+FROM sa_unemployment
+GROUP BY Year
+ORDER BY Year;
